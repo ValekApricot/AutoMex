@@ -1,0 +1,61 @@
+﻿<Page x:Class="AutoMex.Pages.pgVoucher"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoMex.Pages"
+      mc:Ignorable="d" 
+    d:DesignHeight="450" d:DesignWidth="700"
+      Title="pgVoucher">
+
+    <Grid>
+        <Grid.OpacityMask>
+            <ImageBrush ImageSource="D:\AutoMex\AutoMex\Resources\JpgPhoto\1620702247_4-phonoteka_org-p-fon-dlya-deteilinga-7.jpg"/>
+        </Grid.OpacityMask>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.ColumnSpan="3">
+            <Label Content="Voucher" Foreground="White" Margin="0 0 15 0"></Label>
+            <Label Content="Search:" Foreground="White"></Label>
+            <TextBox x:Name="tbSearch" Width="200"></TextBox>
+            <Label Content="In:"></Label>
+            <ComboBox x:Name="CB" SelectionChanged="CB_SelectionChanged" Width="200" HorizontalAlignment="Left">
+                <ComboBoxItem Content="ID"></ComboBoxItem>
+                <ComboBoxItem Content="TotalCost"></ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnAll" Margin ="20 0 0 0" Content="All entries" Click="btnAll_Click"></Button>
+        </WrapPanel>
+
+        <CheckBox x:Name="chbEmp" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbClt" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+        <CheckBox x:Name="chbTct" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="chb_Click"></CheckBox>
+
+        <Label Content="Employee" Foreground="White" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Client" Foreground="White" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"></Label>
+        <Label Content="Total cost" Foreground="White" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"></Label>
+
+        <DataGrid x:Name="DG" 
+                  AutoGenerateColumns="False"
+                  Grid.Column="2"
+                  Grid.Row="1"
+                  Grid.RowSpan="3"
+                  SelectionChanged="DG_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IDVoucher}"/>
+                <DataGridTextColumn x:Name="dgtcEmp" Header="Employee" Binding="{Binding Employee.LastName}"/>
+                <DataGridTextColumn x:Name="dgtcClt" Header="Client" Binding="{Binding Client.LastName}"/>
+                <DataGridTextColumn x:Name="dgtcTct" Header="TotalCost" Binding="{Binding TotalCost}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

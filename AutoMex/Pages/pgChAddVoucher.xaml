@@ -1,0 +1,56 @@
+﻿<Page x:Class="AutoMex.Pages.pgChAddVoucher"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoMex.Pages"
+      mc:Ignorable="d" 
+ d:DesignHeight="250" d:DesignWidth="300"
+      Title="pgChAddVoucher">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\AutoMex\AutoMex\Resources\JpgPhoto\fonstola.ru_117553.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Client data change" Foreground="White" Grid.ColumnSpan="2" HorizontalAlignment="Center"></Label>
+
+        <Label Content="ID" HorizontalAlignment="Center" Foreground="White" Grid.Row="2"></Label>
+        <Label Content="Employee" HorizontalAlignment="Center" Foreground="White" Grid.Row="1"></Label>
+        <Label Content="Client" HorizontalAlignment="Center" Foreground="White" Grid.Row="3"></Label>
+        <Label Content="TotalCost" HorizontalAlignment="Center" Foreground="White" Grid.Row="4"></Label>
+        <Label Content="IsDeleted" HorizontalAlignment="Center" Foreground="White" Grid.Row="5"></Label>
+
+        <TextBox  x:Name="tbID" Grid.Column="1" Grid.Row="2"></TextBox>
+        <ComboBox   Name="cbEmp" Grid.Column="1" Grid.Row="1"></ComboBox>
+        <ComboBox   Name="cbClt" Grid.Column="1" Grid.Row="3"></ComboBox>
+        <TextBox  x:Name="tbTCt" Grid.Row="4" Grid.Column="1"></TextBox>
+        <CheckBox x:Name="chbdel" 
+                  Grid.Row="5" 
+                  Grid.Column="1"
+                  VerticalAlignment="Center"
+                  Margin="15 0 0 0"></CheckBox>
+
+        <Button x:Name="btnSave"
+                Content="Сохранить" 
+                Background="White"
+                FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"
+                Width="69" 
+                Grid.Column="1"
+                Grid.Row="5"
+                HorizontalAlignment="Left" Click="btnSave_Click" Margin="131,35,0,0" Grid.RowSpan="2"></Button>
+    </Grid>
+</Page>

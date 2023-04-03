@@ -1,0 +1,53 @@
+﻿<Window x:Class="AutoMex.Windows.winWork"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoMex.Windows"
+        mc:Ignorable="d"
+        Title="winWork" Height="450" Width="800" WindowStyle="None">
+
+    <Window.Resources>
+        <Style x:Key="WindowStyle1" TargetType="{x:Type Window}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\AutoMex\AutoMex\Resources\JpgPhoto\1616663506_42-p-avtoservis-fon-47.jpg"/>
+        </Grid.Background>
+        <Frame HorizontalAlignment="Left" 
+               VerticalAlignment="Center" 
+               Name="Frame"
+               NavigationUIVisibility="Hidden"></Frame>
+
+        <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="1,0,0,0">
+            <Button Content="Добавить" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" FontSize="20" Width="154" Click="Button_Click_2"/>
+            <Button Content="Изменить" FontSize="20" Click="Button_Click_1" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" Width="154"/>
+            <Button Content="Удалить" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"  FontSize="20" Width="154" />
+        </WrapPanel>
+
+        <Button Content="Выход" VerticalAlignment="Top" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" HorizontalAlignment="Left" Click="Button_Click_3"  FontSize="20" Width="154" Margin="463,423,0,0"></Button>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right">
+            <Button Content="Клиент" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold" />
+            <Button Content="Гендер" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Должность" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Сотрудник" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Сотрудник-Сервис" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Сервис" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Чек" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Чек-Сервис" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Чек-Продукт" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Продукт" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Продукт-Сервис" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+            <Button Content="Поставщик" Margin="0 5 0 0" Click="Button_Click" Background="White" FontStyle="Italic" FontFamily="Times New Roman" FontWeight="DemiBold"/>
+        </StackPanel>
+    </Grid>
+</Window>
